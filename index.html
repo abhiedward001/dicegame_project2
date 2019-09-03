@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spin the dice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="Author" content="Abhishek Jaiswal"> 
+
+</head>
+<body>
+<div class="container">
+
+	<div class="header">
+
+		<H1>SPIN THE DICE</H1><hr />
+
+	</div>
+	<div class="record">
+
+		<h3><u>PLAYER1</u></h3><br /><br />
+		<h2>TOTAL SCORE-:<span id = "ts"></span></h2>
+	</div>
+	<div class="dice">
+    <img src="images/dice-5.png" id="check">
+
+	</div>
+	<div class="footer">
+
+		<h2>COUNTER-:<span id="counter">0</span></h2>
+		<button onclick="dicegame()" id="roll" >ROLL_DICE</button>
+	</div>
+</div>
+<script>
+	var counter=0;
+	var a=0;
+	var total = document.getElementById("ts");
+	function dicegame(){
+	const rand_nm=Math.floor(Math.random()*6)+1;
+	a=rand_nm;
+	const rand_nm_dice="images/dice-" + rand_nm+".png";
+	document.getElementById('check').setAttribute('src',rand_nm_dice);
+
+}
+var count =document.getElementById("counter");
+var roll = document.getElementById("roll");
+roll.addEventListener("click",function(){
+counter += a;
+count.textContent = counter;
+a=0;
+});
+setTimeout(function(){
+		roll.setAttribute("disabled","");
+		total.textContent = counter;
+	},20000);
+
+
+</script>
+</body>
+</html>

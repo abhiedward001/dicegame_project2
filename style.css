@@ -1,0 +1,44 @@
+*{
+	margin:0;
+	padding:0;
+
+}
+body{
+background-color: rgba(154,151,54,.3);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+}
+.header{
+	color:rgba(17,94,100,.6);
+	text-align: center;
+	font-size:2rem; 
+	text-shadow: 3px 3px white;
+}
+.record{
+	text-align: center;
+	margin:20px;
+	padding:20px;
+	color:rgba(167,111,16,.9);
+}
+.dice img{
+border-radius: 15px;
+
+padding:10px;
+position: relative;
+left: 39%;
+}
+.footer h2{
+	margin:10px;
+	padding:10px;
+	color:rgba(17,94,100,.95);
+}
+.footer button{
+	position: relative;
+	left:46%;
+	background-color:rgba(184,13,65,.4);
+	color:white;
+	padding: 10px;
+
+}
